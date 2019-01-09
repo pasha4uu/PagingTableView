@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *pagingTBV;
 
+@property NSMutableArray * dataARR;
+@property long limit ;
+@property int TotalEntries;
 @end
 
